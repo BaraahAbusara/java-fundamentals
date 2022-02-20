@@ -1,4 +1,4 @@
-//package com.w3spoint;
+
 import java.lang.String;
 import java.util.Random;
 import java.time.LocalDateTime;
@@ -6,12 +6,13 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
 class Main {
-    public static void main(String[] args){
+    public static void main (String[] args){
 
-       System.out.println(pluralize (args[0],args[1])) ;
-       flipNHeads (args[3]);
+       System.out.println(pluralize("cat",3)) ;
+       flipNHeads (3);
        clock();
     }
+
     public static String pluralize (String str, int num)
     {
         if (num ==0||num>1 )
@@ -38,7 +39,6 @@ class Main {
                 counter++;
                 flips++;
             }
-
         }
         System.out.println("It took "+flips+" flips to flip "+n+" head in a row.");
     }
@@ -53,19 +53,14 @@ class Main {
             count++;
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter format = DateTimeFormatter.ofPattern("HH:mm:ss");
-
             String formatDateTime = now.format(format);
-
-
             if(!(formatDateTime.equals(formatPreviousDateTime)))
             {
                 System.out.println(formatDateTime+"   "+count/Million+" MHz" );
                 formatPreviousDateTime=formatDateTime;
                 count =0;
             }
-
         }
-
     }
 
 
