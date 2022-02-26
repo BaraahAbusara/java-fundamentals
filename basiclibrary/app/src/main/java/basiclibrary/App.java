@@ -3,15 +3,62 @@
  */
 package basiclibrary;
 
+import java.util.Random;
+
 public class App {
-    public int[] roll(int n) {
-        int[] ansArr=new int[n+1];
 
+    public static int[] roll(int n) {
+        int[] ansArr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            Random random = new Random();
+            int minRange = 1, maxRange= 6;
+            int value = random.nextInt(maxRange - minRange) + minRange;
+            ansArr[i]=value;
+        }
+        return ansArr;
+    }
 
+    public static boolean containsDuplicates(int[] arr){
+        for(int i=0;i<arr.length;i++)
+        {
+             for(int num=i+1;num<arr.length;num++)
+            {
+                if(arr[i]==arr[num])
+                    return false;
+            }
+
+        }
+        return true;
+    }
+    public static double CalculatingAverages(int[] arr){
+        double sum =0;
+        for (int i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+        }
+        double average = sum/arr.length;
+        return average;
+    }
+    public static int[] ArraysofArrays(int[][] arr){
+        int ansArr[]=new int[arr[0].length];
+
+        double mnAvg=1000000;
+
+        double curAvg=-1;
+
+        for(int i=0;i<arr.length;i++){
+            curAvg = CalculatingAverages(arr[i]);
+            if(mnAvg>curAvg){
+                mnAvg=curAvg;
+               ansArr=arr[i];
+            }
+
+        }
         return ansArr;
     }
 
     public static void main(String[] args) {
-        System.out.println();
+
     }
 }

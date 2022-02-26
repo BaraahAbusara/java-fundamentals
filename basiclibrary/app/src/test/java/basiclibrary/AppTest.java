@@ -7,8 +7,50 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    void rollTest (){
+
+        int[] rollAns5=App.roll(5);
+        assertEquals(5,rollAns5.length);
+
+        int[] rollAns0=App.roll(0);
+        assertEquals(0,rollAns0.length);
     }
+
+    @Test
+    void containsDuplicatesTest (){
+        int[] arr1 = {1,2,3,4,5,6};
+        boolean test1=App.containsDuplicates(arr1);
+        assertTrue(test1);
+
+        int[] arr2 = {1,2,3,4,5,6,1};
+        boolean test2=App.containsDuplicates(arr2);
+        assertFalse(test2);
+    }
+
+    @Test
+    void CalculatingAveragesTest (){
+        int[] arr1 = {5,5,5,5,5,5};
+        double test1=App.CalculatingAverages(arr1);
+        assertEquals(5,test1);
+
+        int[] arr2 = {1,2,3,4,5,6};
+        double test2=App.CalculatingAverages(arr2);
+        assertEquals(3.5,test2);
+    }
+    @Test
+    void ArraysofArraysTest (){
+        int[][] arr1 = {
+                {1, 1, 1, 1, 1, 1, 1},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        int[] ansArr={1, 1, 1, 1, 1, 1, 1};
+        int[] test1=App.ArraysofArrays(arr1);
+        assertArrayEquals(ansArr,test1);
+
+    }
+
+
 }
