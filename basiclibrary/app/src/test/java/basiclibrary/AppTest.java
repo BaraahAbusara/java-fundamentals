@@ -4,6 +4,10 @@
 package basiclibrary;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -49,6 +53,45 @@ class AppTest {
         int[] ansArr={1, 1, 1, 1, 1, 1, 1};
         int[] test1=App.ArraysofArrays(arr1);
         assertArrayEquals(ansArr,test1);
+
+    }
+    @Test
+    void tallyTest (){
+        ArrayList<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String answer="Bush";
+        String test1=App.tally(votes);
+
+
+        assertEquals(answer,test1);
+    }
+
+    @Test
+    void AnalyzingWeatherDataTest (){
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        HashSet<String> ansArr= new HashSet<>();
+        ansArr.add("Never saw temperature: 63");
+        ansArr.add("Never saw temperature: 67");
+        ansArr.add("Never saw temperature: 68");
+        ansArr.add("Never saw temperature: 69");
+
+
+        HashSet<String> test1=App.AnalyzingWeatherData(weeklyMonthTemperatures);
+        assertEquals(ansArr,test1);
 
     }
 

@@ -3,7 +3,7 @@
  */
 package basiclibrary;
 
-import java.util.Random;
+import java.util.*;
 
 public class App {
 
@@ -57,8 +57,62 @@ public class App {
         }
         return ansArr;
     }
+    public static HashSet<String> AnalyzingWeatherData(int[][] data){
+        int mnValue=1000000,mxValue=-1;
+        HashSet<Integer> dataSet = new HashSet<>();
+        HashSet<String> answerSet = new HashSet<>();
 
+        for(int i=0;i<data.length;i++)
+        {
+            for(int j=0;j<data[i].length;j++)
+            {
+                dataSet.add(data[i][j]);
+                if(mnValue>data[i][j])
+                {
+                    mnValue=data[i][j];
+                }
+                if(mxValue<data[i][j])
+                {
+                    mxValue=data[i][j];
+                }
+
+            }
+        }
+        String answer="";
+        for (int i = mnValue; i <=mxValue ; i++) {
+            if(!dataSet.contains(i))
+            {
+                answer="Never saw temperature: "+i;
+                answerSet.add(answer);
+
+            }
+        }
+        return answerSet;
+    }
+    public static String tally(ArrayList<String> arr)
+    {
+        int MaxVotes=0;
+        String WinnerName="";
+        Map <String , Integer> votes= new HashMap<>();
+        for (int i = 0; i < arr.size(); i++) {
+            if(votes.containsKey(arr.get(i)))
+            {
+                votes.put(arr.get(i),votes.get(arr.get(i))+1);
+                if(votes.get(arr.get(i))>MaxVotes)
+                {
+                    MaxVotes=votes.get(arr.get(i));
+                    WinnerName=arr.get(i);
+                }
+             }
+            else
+            {
+                votes.put(arr.get(i),0);
+            }
+      }
+        return WinnerName;
+    }
     public static void main(String[] args) {
+
 
     }
 }

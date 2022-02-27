@@ -16,3 +16,11 @@ This lab included tasks being solved using following methods:
 - Random to get random values within a specific range.
 - Nested loops to check is an array has duplicated values and find the average of arrays in a 2D array.
 - adding test cases inside the test file to test for the problems using @Test , assetEquals ,assertTrue,assertFalse and assertArrayEquals.
+
+## Lab-03
+***
+This lab included tasks being solved using following methods:
+- I/O from a file inside the resources directory using Scanner and its methods(nextLine,hasNextLine).
+- used Map and its methods (containsKey,put,get).
+- used ArrayList and its methods (get).
+- used FileNotFoundException.
