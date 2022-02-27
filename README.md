@@ -1,7 +1,9 @@
 # java-fundamentals
 This repository will hold my work for the first project at the Advanced level course of Java at ASAC. 
 
+
 ## Lab-01
+
 ***
 This lab included tasks being solved using following methods:
 - functions inside the class and calling them in the main.
@@ -24,3 +26,4 @@ This lab included tasks being solved using following methods:
 - used Map and its methods (containsKey,put,get).
 - used ArrayList and its methods (get).
 - used FileNotFoundException.
+
