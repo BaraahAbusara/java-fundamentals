@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-class App {
+class Main {
     public static void main (String[] args){
 
         System.out.println(pluralize("cat",3)) ;
@@ -33,6 +33,7 @@ class App {
             {
                 System.out.println("tails");
                 flips++;
+                counter=0;
             }
             else
             {
