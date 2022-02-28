@@ -31,7 +31,7 @@ public class App {
         ArrayList <String> answerArray= new ArrayList<>() ;
         try (Scanner scanner = new Scanner(file)) {
             int lineNumber=1;
-            while (scanner.hasNextLinehasNextLine()) {
+            while (scanner.hasNextLine()) {
 //                System.out.println(scanner.nextLine());
                 String currentLine = scanner.nextLine();
                 if(checkLine(currentLine,lineNumber))
