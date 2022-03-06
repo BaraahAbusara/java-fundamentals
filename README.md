@@ -27,3 +27,16 @@ This lab included tasks being solved using following methods:
 - used ArrayList and its methods (get).
 - used FileNotFoundException.
 
+##Lab-04
+***
+
+##Lab-05
+***
+
+##Lab-06 : inheritance 
+***
+In this lab I implemented: 
+- Restaurant class that has a name , stars ,priceCategory and arrayList of reviews.
+- Reviews class that provided the used to  make a review with a body, author and stars to the Restaurant.
+- AddReviews that adds the review to the arrayList in the restaurant. 
+

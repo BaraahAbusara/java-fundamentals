@@ -24,10 +24,10 @@ public class App {
 
 
     }
-    public static ArrayList <String> callLines(String path)
+    public static ArrayList <String> callLines(File file)
     {
-
-        File file = new File(path);
+        System.out.println("now in");
+        //File file = new File(path);
         ArrayList <String> answerArray= new ArrayList<>() ;
         try (Scanner scanner = new Scanner(file)) {
             int lineNumber=1;
@@ -45,13 +45,14 @@ public class App {
             System.err.println(fileNotFoundException.getMessage());
         }
         return answerArray;
+
     }
 
 
 
         public static void main(String[] args)  {
             String path = "app/src/test/resources/oneError.js";
-            System.out.println(callLines(path));
+           // System.out.println(callLines(path));
         }
 
     //callLines function created by help of the instructor's code

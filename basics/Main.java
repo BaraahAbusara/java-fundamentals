@@ -10,7 +10,7 @@ class Main {
     public static void main (String[] args){
 
         System.out.println(pluralize("cat",3)) ;
-        flipNHeads (3);
+        flipNHeads (10);
         clock();
     }
 
@@ -42,7 +42,7 @@ class Main {
                 flips++;
             }
         }
-        System.out.println("It took "+flips+" flips to flip "+n+" head in a row.");
+        System.out.println("It took "+flips+" flips to flip "+n+" heads in a row.");
     }
 
     public static void clock ()
