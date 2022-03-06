@@ -3,59 +3,87 @@
  */
 package linter;
 
+import jdk.internal.jimage.ImageReader;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.nio.file.FileSystems;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+//    public static ArrayList <String> callLines(String path)
+//    {
+//
+//        File file = new File(path);
+//        ArrayList <String> answerArray= new ArrayList<>() ;
+//        try (Scanner scanner = new Scanner(file)) {
+//            int lineNumber=1;
+//            while (scanner.hasNextLine()) {
+////                System.out.println(scanner.nextLine());
+//                String currentLine = scanner.nextLine();
+//                if(App.checkLine(currentLine,lineNumber))
+//                {
+//                    answerArray.add("Line "+lineNumber+": Missing semicolon.");
+//                }
+//                lineNumber++;
+//            }
+//        } catch (FileNotFoundException fileNotFoundException) {
+//            System.out.println("From catch");
+//            System.err.println(fileNotFoundException.getMessage());
+//        }
+//        return answerArray;
+//    }
+
     @Test
     void callLinesTest (){
-
-        String path1 = "app/src/test/resources/oneError.js";
-        ArrayList<String>  test1=App.callLines(path1);
+        ClassLoader classLoader = this.getClass().getClassLoader();
+        File file = new File(classLoader.getResource("oneError.js").toString());
+       // String path1 = "linter/app/src/main/resources/oneError.js";
+        ArrayList<String>  test1=App.callLines(file);
         ArrayList<String> correctAnswer1 = new ArrayList<>();
         correctAnswer1.add("Line 2: Missing semicolon.");
-//        System.out.println(test1);
         assertEquals(correctAnswer1,test1);
 
 
-        String path2 = "app/src/test/resources/empty.js";
-        ArrayList<String>  test2=App.callLines(path2);
-        ArrayList<String> correctAnswer2 = new ArrayList<>();
-        assertEquals(correctAnswer2,test2);
-
-        String path3 = "app/src/test/resources/fewErrors.js";
-        ArrayList<String>  test3=App.callLines(path3);
-        ArrayList<String> correctAnswer3 = new ArrayList<>();
-        correctAnswer3.add("Line 2: Missing semicolon.");
-        correctAnswer3.add("Line 4: Missing semicolon.");
-        correctAnswer3.add("Line 6: Missing semicolon.");
-        correctAnswer3.add("Line 8: Missing semicolon.");
-        assertEquals(correctAnswer2,test2);
-
-        String path4 = "app/src/test/resources/NoErrorsFile.js";
-        ArrayList<String>  test4=App.callLines(path4);
-        ArrayList<String> correctAnswer4 = new ArrayList<>();
-        assertEquals(correctAnswer4,test4);
-
-
-        String path5 = "app/src/test/resources/gates.js";
-        ArrayList<String>  test5=App.callLines(path5);
-        ArrayList<String> correctAnswer5 = new ArrayList<>();
-        correctAnswer5.add("Line 2: Missing semicolon.");
-        correctAnswer5.add("Line 3: Missing semicolon.");
-        correctAnswer5.add("Line 4: Missing semicolon.");
-        correctAnswer5.add("Line 5: Missing semicolon.");
-        correctAnswer5.add("Line 6: Missing semicolon.");
-        correctAnswer5.add("Line 7: Missing semicolon.");
-        correctAnswer5.add("Line 8: Missing semicolon.");
-        correctAnswer5.add("Line 9: Missing semicolon.");
-
-
-        assertEquals(correctAnswer5,test5);
+//        String path2 = "app/src/test/resources/empty.js";
+//        ArrayList<String>  test2=App.callLines(path2);
+//        ArrayList<String> correctAnswer2 = new ArrayList<>();
+//        assertEquals(correctAnswer2,test2);
+//
+//        String path3 = "app/src/test/resources/fewErrors.js";
+//        ArrayList<String>  test3=App.callLines(path3);
+//        ArrayList<String> correctAnswer3 = new ArrayList<>();
+//        correctAnswer3.add("Line 2: Missing semicolon.");
+//        correctAnswer3.add("Line 4: Missing semicolon.");
+//        correctAnswer3.add("Line 6: Missing semicolon.");
+//        correctAnswer3.add("Line 8: Missing semicolon.");
+//        assertEquals(correctAnswer2,test2);
+//
+//        String path4 = "app/src/test/resources/NoErrorsFile.js";
+//        ArrayList<String>  test4=App.callLines(path4);
+//        ArrayList<String> correctAnswer4 = new ArrayList<>();
+//        assertEquals(correctAnswer4,test4);
+//
+//
+//        String path5 = "app/src/test/resources/gates.js";
+//        ArrayList<String>  test5=App.callLines(path5);
+//        ArrayList<String> correctAnswer5 = new ArrayList<>();
+//        correctAnswer5.add("Line 2: Missing semicolon.");
+//        correctAnswer5.add("Line 3: Missing semicolon.");
+//        correctAnswer5.add("Line 4: Missing semicolon.");
+//        correctAnswer5.add("Line 5: Missing semicolon.");
+//        correctAnswer5.add("Line 6: Missing semicolon.");
+//        correctAnswer5.add("Line 7: Missing semicolon.");
+//        correctAnswer5.add("Line 8: Missing semicolon.");
+//        correctAnswer5.add("Line 9: Missing semicolon.");
+//
+//
+//        assertEquals(correctAnswer5,test5);
 
 
     }
