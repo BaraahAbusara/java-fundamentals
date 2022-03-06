@@ -1,7 +1,9 @@
 # java-fundamentals
 This repository will hold my work for the first project at the Advanced level course of Java at ASAC. 
 
+
 ## Lab-01
+
 ***
 This lab included tasks being solved using following methods:
 - functions inside the class and calling them in the main.
@@ -37,3 +39,4 @@ In this lab I implemented:
 - Restaurant class that has a name , stars ,priceCategory and arrayList of reviews.
 - Reviews class that provided the used to  make a review with a body, author and stars to the Restaurant.
 - AddReviews that adds the review to the arrayList in the restaurant. 
+
