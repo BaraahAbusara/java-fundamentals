@@ -27,16 +27,17 @@ This lab included tasks being solved using following methods:
 - used ArrayList and its methods (get).
 - used FileNotFoundException.
 
-##Lab-04
-***
 
-##Lab-05
-***
-
-##Lab-06 : inheritance 
+## Lab-06 : inheritance 
 ***
 In this lab I implemented: 
 - Restaurant class that has a name , stars ,priceCategory and arrayList of reviews.
 - Reviews class that provided the used to  make a review with a body, author and stars to the Restaurant.
 - AddReviews that adds the review to the arrayList in the restaurant. 
+
+
+## Lab-07 : inheritance-2 
+In this lab I implemented class Company that is the parent of classes Restaurant, Shop and Theater.
+Each of them is an inheritance to Company taking its arguments and methods overriding some of them and implementing new methods and arguments. 
+I implemented movie object to be added inside the moviesList inside the theater and users can add their reviews to the "Company" reviewsList , and can add it to a specific movie in the theater. 
 
