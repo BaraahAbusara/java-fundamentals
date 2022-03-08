@@ -9,7 +9,18 @@ public class Library {
         burgrize.addReview("Good","Baraa",3);
         burgrize.addReview("Good","Baraa",5);
         System.out.println(burgrize.toString());
+
+        Theater theater = new Theater("Shams");
+
+        Movie Batman = new Movie("Batman");
+        theater.addMovie(Batman);
+        theater.addReview("Good movie","Bara'ah",5);
+        theater.addReview("Good movie","Bara'ah",5,Batman);
+
+        System.out.println(theater.toString());
+
     }
+
 
 
 }
