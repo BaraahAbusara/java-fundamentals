@@ -1,7 +1,9 @@
 # java-fundamentals
 This repository will hold my work for the first project at the Advanced level course of Java at ASAC. 
 
+
 ## Lab-01
+
 ***
 This lab included tasks being solved using following methods:
 - functions inside the class and calling them in the main.
@@ -33,7 +35,9 @@ In this lab I implemented:
 - Reviews class that provided the used to  make a review with a body, author and stars to the Restaurant.
 - AddReviews that adds the review to the arrayList in the restaurant. 
 
+
 ## Lab-07 : inheritance-2 
 In this lab I implemented class Company that is the parent of classes Restaurant, Shop and Theater.
 Each of them is an inheritance to Company taking its arguments and methods overriding some of them and implementing new methods and arguments. 
 I implemented movie object to be added inside the moviesList inside the theater and users can add their reviews to the "Company" reviewsList , and can add it to a specific movie in the theater. 
+
