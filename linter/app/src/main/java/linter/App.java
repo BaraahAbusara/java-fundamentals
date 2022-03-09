@@ -12,7 +12,7 @@ public class App {
         else
         {
 
-            if(lines.contains(";") || lines.contains("}")||lines.contains("{")|| lines.contains("if")||lines.contains("else")){
+            if(lines.endsWith(";") ||lines.endsWith("}")||lines.endsWith("{")|| lines.contains("if")||lines.contains("else")){
                 return false;
             }
             else{
@@ -26,13 +26,11 @@ public class App {
     }
     public static ArrayList <String> callLines(File file)
     {
-        System.out.println("now in");
-        //File file = new File(path);
+
         ArrayList <String> answerArray= new ArrayList<>() ;
         try (Scanner scanner = new Scanner(file)) {
             int lineNumber=1;
             while (scanner.hasNextLine()) {
-//                System.out.println(scanner.nextLine());
                 String currentLine = scanner.nextLine();
                 if(checkLine(currentLine,lineNumber))
                 {
@@ -52,7 +50,8 @@ public class App {
 
         public static void main(String[] args)  {
             String path = "app/src/test/resources/oneError.js";
-           // System.out.println(callLines(path));
+            File file = new File(path);
+            System.out.println(callLines(file));
         }
 
     //callLines function created by help of the instructor's code

@@ -57,10 +57,10 @@ public class App {
         }
         return ansArr;
     }
-    public static HashSet<String> analyzingWeatherData(int[][] data){
+    public static String analyzingWeatherData(int[][] data){
         int mnValue=1000000,mxValue=-1;
         HashSet<Integer> dataSet = new HashSet<>();
-        HashSet<String> answerSet = new HashSet<>();
+        String answerStr ="";
 
         for(int i=0;i<data.length;i++)
         {
@@ -79,15 +79,19 @@ public class App {
             }
         }
         String answer="";
+
+        answerStr+="High: "+mxValue+"\n";
+        answerStr+="Low: "+mnValue+"\n";
+
         for (int i = mnValue; i <=mxValue ; i++) {
             if(!dataSet.contains(i))
             {
-                answer="Never saw temperature: "+i;
-                answerSet.add(answer);
+                answer="Never saw temperature: "+i+"\n";
+                answerStr+=(answer);
 
             }
         }
-        return answerSet;
+        return answerStr;
     }
     public static String tally(ArrayList<String> arr)
     {
