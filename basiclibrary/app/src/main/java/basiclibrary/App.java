@@ -12,7 +12,7 @@ public class App {
         for(int i=0;i<n;i++)
         {
             Random random = new Random();
-            int minRange = 1, maxRange= 6;
+            int minRange = 1, maxRange= 7;
             int value = random.nextInt(maxRange - minRange) + minRange;
             ansArr[i]=value;
         }
@@ -25,13 +25,13 @@ public class App {
              for(int num=i+1;num<arr.length;num++)
             {
                 if(arr[i]==arr[num])
-                    return false;
+                    return true;
             }
 
         }
-        return true;
+        return false;
     }
-    public static double CalculatingAverages(int[] arr){
+    public static double calculatingAverages(int[] arr){
         double sum =0;
         for (int i=0;i<arr.length;i++)
         {
@@ -40,7 +40,7 @@ public class App {
         double average = sum/arr.length;
         return average;
     }
-    public static int[] ArraysofArrays(int[][] arr){
+    public static int[] arraysOfArrays(int[][] arr){
         int ansArr[]=new int[arr[0].length];
 
         double mnAvg=1000000;
@@ -48,7 +48,7 @@ public class App {
         double curAvg=-1;
 
         for(int i=0;i<arr.length;i++){
-            curAvg = CalculatingAverages(arr[i]);
+            curAvg = calculatingAverages(arr[i]);
             if(mnAvg>curAvg){
                 mnAvg=curAvg;
                ansArr=arr[i];
@@ -57,7 +57,7 @@ public class App {
         }
         return ansArr;
     }
-    public static HashSet<String> AnalyzingWeatherData(int[][] data){
+    public static HashSet<String> analyzingWeatherData(int[][] data){
         int mnValue=1000000,mxValue=-1;
         HashSet<Integer> dataSet = new HashSet<>();
         HashSet<String> answerSet = new HashSet<>();
@@ -91,17 +91,17 @@ public class App {
     }
     public static String tally(ArrayList<String> arr)
     {
-        int MaxVotes=0;
-        String WinnerName="";
+        int maxVotes=0;
+        String winnerName="";
         Map <String , Integer> votes= new HashMap<>();
         for (int i = 0; i < arr.size(); i++) {
             if(votes.containsKey(arr.get(i)))
             {
                 votes.put(arr.get(i),votes.get(arr.get(i))+1);
-                if(votes.get(arr.get(i))>MaxVotes)
+                if(votes.get(arr.get(i))>maxVotes)
                 {
-                    MaxVotes=votes.get(arr.get(i));
-                    WinnerName=arr.get(i);
+                    maxVotes=votes.get(arr.get(i));
+                    winnerName=arr.get(i);
                 }
              }
             else
@@ -109,7 +109,7 @@ public class App {
                 votes.put(arr.get(i),0);
             }
       }
-        return WinnerName;
+        return winnerName;
     }
     public static void main(String[] args) {
 
