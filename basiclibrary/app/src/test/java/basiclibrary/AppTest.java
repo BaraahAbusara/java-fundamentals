@@ -33,17 +33,17 @@ class AppTest {
     }
 
     @Test
-    void CalculatingAveragesTest (){
+    void calculatingAveragesTest (){
         int[] arr1 = {5,5,5,5,5,5};
-        double test1=App.CalculatingAverages(arr1);
+        double test1=App.calculatingAverages(arr1);
         assertEquals(5,test1);
 
         int[] arr2 = {1,2,3,4,5,6};
-        double test2=App.CalculatingAverages(arr2);
+        double test2=App.calculatingAverages(arr2);
         assertEquals(3.5,test2);
     }
     @Test
-    void ArraysofArraysTest (){
+    void arraysOfArraysTest (){
         int[][] arr1 = {
                 {1, 1, 1, 1, 1, 1, 1},
                 {57, 65, 65, 70, 72, 65, 51},
@@ -51,7 +51,7 @@ class AppTest {
                 {65, 56, 55, 52, 55, 62, 57}
         };
         int[] ansArr={1, 1, 1, 1, 1, 1, 1};
-        int[] test1=App.ArraysofArrays(arr1);
+        int[] test1=App.arraysOfArrays(arr1);
         assertArrayEquals(ansArr,test1);
 
     }
@@ -76,7 +76,7 @@ class AppTest {
     }
 
     @Test
-    void AnalyzingWeatherDataTest (){
+    void analyzingWeatherDataTest (){
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
@@ -90,7 +90,7 @@ class AppTest {
         ansArr.add("Never saw temperature: 69");
 
 
-        HashSet<String> test1=App.AnalyzingWeatherData(weeklyMonthTemperatures);
+        HashSet<String> test1=App.analyzingWeatherData(weeklyMonthTemperatures);
         assertEquals(ansArr,test1);
 
     }
