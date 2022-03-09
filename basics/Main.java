@@ -10,7 +10,7 @@ class Main {
     public static void main (String[] args){
 
         System.out.println(pluralize("cat",3)) ;
-        flipNHeads (10);
+        flipNHeads (6);
         clock();
     }
 

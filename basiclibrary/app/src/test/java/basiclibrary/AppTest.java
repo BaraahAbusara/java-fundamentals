@@ -83,16 +83,17 @@ class AppTest {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        HashSet<String> ansArr= new HashSet<>();
-        ansArr.add("Never saw temperature: 63");
-        ansArr.add("Never saw temperature: 67");
-        ansArr.add("Never saw temperature: 68");
-        ansArr.add("Never saw temperature: 69");
+        String ansArr= new String();
+        ansArr+=("High: 72"+"\n");
+        ansArr+=("Low: 51"+"\n");
+        ansArr+=("Never saw temperature: 63"+"\n");
+        ansArr+=("Never saw temperature: 67"+"\n");
+        ansArr+=("Never saw temperature: 68"+"\n");
+        ansArr+=("Never saw temperature: 69"+"\n");
 
+        String test1=App.analyzingWeatherData(weeklyMonthTemperatures);
 
-        HashSet<String> test1=App.analyzingWeatherData(weeklyMonthTemperatures);
         assertEquals(ansArr,test1);
-
     }
 
 

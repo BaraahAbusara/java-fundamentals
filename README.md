@@ -24,6 +24,8 @@ This lab included tasks being solved using following methods:
 - used Map and its methods (containsKey,put,get).
 - used ArrayList and its methods (get).
 - used FileNotFoundException.
+- used endsWith to look is a string ends with a specific value.
+- used ClassLoader to find paths for testing. 
 
 
 ## Lab-06 : inheritance 
