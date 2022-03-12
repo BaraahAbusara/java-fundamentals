@@ -11,6 +11,9 @@ public class MovieReview extends Review{
     @Override
     public String toString() {
         return "MovieReview{" +
+                "body='" + super.getBody() + '\'' +
+                ", author='" + super.getAuthor() + '\'' +
+                ", reviewStars=" + super.getReviewStars() +
                 "movie=" + movie +
                 '}';
     }
